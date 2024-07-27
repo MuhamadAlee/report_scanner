@@ -1,0 +1,67 @@
+import os
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.image import MIMEImage
+from email.mime.text import MIMEText
+from dotenv import load_dotenv
+_ = load_dotenv()
+
+
+def send_email(to_email, month, num_requests, charges):
+    # Email credentials
+    sender_email = os.getenv("EMAIL_ADDRESS")
+    sender_password = os.getenv("EMAIL_PASSWORD")
+
+    # Create the email message
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = to_email
+    msg['Subject'] = f"Your Subscription Charges for {month}"
+
+    body = f"""
+    <html>
+    <body>
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td align="left">
+                    <img src="cid:logo" alt="Company Logo" width="100" height="50">
+                </td>
+            </tr>
+        </table>
+        <h2>Subscription Charges for {month}</h2>
+        <p>Dear Client,</p>
+        <p>Here are the details of your subscription usage for {month}:</p>
+        <ul>
+            <li><strong>Number of Requests:</strong> {num_requests}</li>
+            <li><strong>Charges:</strong> £{charges:.2f}</li>
+        </ul>
+        <p>Thank you for using our service!</p>
+        <p>Best Regards,<br>Translaited</p>
+        <footer>
+            <hr>
+            <p>If you have any questions, please contact us at <a href="mailto:{sender_email}">{sender_email}</a></p>
+        </footer>
+    </body>
+    </html>
+    """
+
+    msg.attach(MIMEText(body, 'html'))
+
+     # Attach the logo image (ensure the logo image is accessible)
+    with open(os.path.join('report_scanner', 'images','logo.jpg'), 'rb') as img_file:
+        msg_image = MIMEImage(img_file.read())
+        msg_image.add_header('Content-ID', '<logo>')
+        msg.attach(msg_image)
+
+    try:
+        # Set up the SMTP server
+        with smtplib.SMTP(os.getenv('SMTP_SERVER'), int(os.getenv('SMTP_PORT'))) as server:
+            server.ehlo()
+            server.starttls()  # Secure the connection
+            server.login(sender_email, sender_password)  # Login to the email account
+            text = msg.as_string()
+            server.sendmail(sender_email, to_email, text)  # Send the email
+            print("Email sent successfully!")
+    except Exception as e:
+        print(f"Failed to send email: {e}")
+    

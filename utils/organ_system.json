@@ -1,0 +1,85 @@
+{
+    "circulartory_system": [
+        "cross_section_artries_veins",
+        "artries_with_cholestrol",
+        "artries",
+        "4_chambers",
+        "cardiovascular",
+        "blood_vessels"
+    ],
+    "endocrine_system": [
+        "parathyroid_gland",
+        "adrenal_gland",
+        "thyroid",
+        "pituitary_gland",
+        "testes_gland",
+        "ovaries_gland",
+        "pineal_gland"
+    ],
+    "skeletal_system": [
+        "interphalangeal_joint",
+        "Sternoclavicular_joint",
+        "carpal_joint",
+        "metacarpophalangeal_joint",
+        "sacroiliac_joint",
+        "metatarsophalangeal_joint",
+        "shoulder_joint",
+        "knee_joint",
+        "wrist_joint",
+        "elbow_joint",
+        "bones",
+        "ankle_joint",
+        "acromioclavicular_joint",
+        "hip_joint",
+        "tarsal_joint",
+        "Temporomandibular_joint"
+    ],
+    "repository_system": [
+        "trachea",
+        "bronchi_bronchioles",
+        "epiglottis",
+        "pharynx",
+        "larynx",
+        "nasal_cavity",
+        "diaphragm",
+        "lungs",
+        "alveoli"
+    ],
+    "urinary_system": [
+        "ureter",
+        "kidney",
+        "bladder",
+        "urethra"
+    ],
+    "lymphatic_system": [
+        "lymphatic_system"
+    ],
+    "reproductive_system": [
+        "male",
+        "female"
+    ],
+    "digestive_system": [
+        "appendix",
+        "large_intestine",
+        "small_intestine",
+        "stomach",
+        "gallbladder",
+        "esophagus",
+        "Pancreas",
+        "mouth_and_teeth",
+        "liver"
+    ],
+    "musculoskeletal_system": [
+        "musculoskeletal_system"
+    ],
+    "integumentary_system": [
+        "hair",
+        "nail",
+        "skin"
+    ],
+    "nervous_system": [
+        "brain",
+        "peripheral_nervous_system",
+        "spinal_cord"
+    ]
+}

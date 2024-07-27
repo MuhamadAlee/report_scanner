@@ -1,0 +1,13 @@
+# Ignore .env file
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Alembic migration files
+alembic/
+alembic.ini
+alembic_version
+versions/

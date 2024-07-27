@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Processor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Report Scanner</h1>
+        <div id="form-container" class="text-center">
+            <div class="form-group">
+                <textarea id="inputText" class="form-control" rows="30" placeholder="Enter your text here..."></textarea>
+            </div>
+            <button id="submitBtn" class="btn btn-primary">Submit</button>
+        </div>
+        <div id="result-container" class="text-center mt-5" style="display: none;">
+            <h2>Processed Report</h2>
+            <div>
+                <p id="resultText" class="text-left p-3"></p>
+            </div>
+            <div id="definition-container" class="text-left p-3 mt-3" style="border-top: 1px solid #ccc;">
+                <h4>Term Definition</h4>
+                <p id="definitionText"></p>
+            </div>
+            <button id="backBtn" class="btn btn-secondary">Back</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', async function() {
+            const text = document.getElementById('inputText').value;
+
+            const response = await fetch('http://0.0.0.0:8080/report_scanner', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: text })
+            });
+
+            const result = await response.json();
+            let reportText = result.response;
+            const medicalTerms = result.medical_terms;
+
+            function boldHeadings(text) {
+                // Use a regular expression to find and replace each heading with bold tags
+                return text.replace(/([A-Za-z\s]+):/g, '<br><strong>$1:</strong>');
+                }
+            
+            reportText = boldHeadings(reportText);
+
+            // Replace medical terms in the report with hyperlinks
+            for (const term in medicalTerms) {
+                // Escape special characters in the term
+                const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const regex = new RegExp(`\\b${escapedTerm}\\b`, 'gi');
+                reportText = reportText.replace("\n", "<br>")
+                reportText = reportText.replace(regex, `<a href="#" class="medical-term" data-term="${term}">${term}</a>`);
+            }
+            
+
+            document.getElementById('resultText').innerHTML = reportText;
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('result-container').style.display = 'block';
+
+            // Add event listeners to medical term links
+            document.querySelectorAll('.medical-term').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const term = event.target.getAttribute('data-term');
+                    const definition = medicalTerms[term];
+                    document.getElementById('definitionText').innerText = `${term}: ${definition}`;
+                });
+            });
+        });
+
+        document.getElementById('backBtn').addEventListener('click', function() {
+            document.getElementById('form-container').style.display = 'block';
+            document.getElementById('result-container').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
