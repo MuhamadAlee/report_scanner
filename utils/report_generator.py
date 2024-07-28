@@ -126,10 +126,12 @@ class ReportGenerator:
     
     @staticmethod
     def transform_dicts(list_of_dicts):
+        print(list_of_dicts)
         responses = list()
         for item in list_of_dicts:
             if item["organ_system"] is not None:
                 image = (os.path.join("report_scanner", "images", item["organ_system"], f'{item["organ_system_portion"]}.jpg'))
+                print(image)
                 with open(image, "rb") as image_file:
                     image = base64.b64encode(image_file.read()).decode('utf-8')
             else:
@@ -173,9 +175,7 @@ class ReportGenerator:
         )
 
         organ_system_chain = organ_system_prompt | self.llm_4_mini | output_parser
-        print("images util called")
         organ_system_response = organ_system_chain.invoke({"medical_terms": medical_terms, "human_organ_system": human_organ_system})
-        print("images util called finshed")
         organ_system_response = self.transform_dicts(organ_system_response['properties'])
         return organ_system_response
         
