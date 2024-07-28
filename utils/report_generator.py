@@ -145,8 +145,8 @@ class ReportGenerator:
         """
         class OrganSystem(BaseModel):
             term: str = Field(description="medical term from the list")
-            organ_system: str  = Field(description="identified item from given organ system JSON object")
-            organ_system_portion: str = Field(description="identified protion from given organ system list inside JSON object")
+            organ_system: str = Field(description="identified item from given organ system JSON object")
+            organ_system_portion: str = Field(description="identified portion from given organ system list inside JSON object")
 
         organ_system_template = """
         You are medical expert who is provided following information.
@@ -159,7 +159,8 @@ class ReportGenerator:
             - If medical term is not related to any of the item of any organ system, simply place None.
             - IMPORTANT! Don't go outside the scope of provided JSON object of human Organ system.
             - As this is about medical diagnoses so, please be deadly accurate in mapping
-            - Once each medical term mapped with relevant item of human organ system, make a JSON object with following instructions.
+            - Once each medical term mapped with relevant item of human organ system, make a final JSON object with following instructions.
+            - Final Json object must have one key as properties and values as JSON object
 
                 \n{format_instructions}
         """
@@ -173,7 +174,7 @@ class ReportGenerator:
 
         organ_system_chain = organ_system_prompt | self.llm_4_mini | output_parser
         organ_system_response = organ_system_chain.invoke({"medical_terms": medical_terms, "human_organ_system": human_organ_system})
-        organ_system_response = self.transform_dicts(organ_system_response)
+        organ_system_response = self.transform_dicts(organ_system_response['properties'])
         return organ_system_response
         
 
