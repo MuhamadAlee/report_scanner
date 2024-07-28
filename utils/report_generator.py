@@ -127,7 +127,6 @@ class ReportGenerator:
     
     @staticmethod
     def transform_dicts(list_of_dicts):
-        print(list_of_dicts)
         responses = list()
         for item in list_of_dicts:
             if item["organ_system"] is not None:

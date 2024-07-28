@@ -17,6 +17,7 @@ class Extractor:
         """
         extracts the actual textual meaningful content from the reports
         """
+        print(file_path)
         report_content = ""
         pages = convert_from_path(file_path, 300)
         for page in pages:
