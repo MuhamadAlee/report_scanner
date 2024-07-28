@@ -2,6 +2,7 @@ import os
 import re
 import json
 import base64
+from pathlib import Path
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
@@ -130,8 +131,7 @@ class ReportGenerator:
         responses = list()
         for item in list_of_dicts:
             if item["organ_system"] is not None:
-                image = (os.path.join("report_scanner", "images", item["organ_system"], f'{item["organ_system_portion"]}.jpg'))
-                print(image)
+                image = (os.path.join(str(Path(__file__).resolve().parent.parent), "images", item["organ_system"], f'{item["organ_system_portion"]}.jpg'))
                 with open(image, "rb") as image_file:
                     image = base64.b64encode(image_file.read()).decode('utf-8')
             else:
