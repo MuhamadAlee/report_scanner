@@ -38,7 +38,7 @@ app.include_router(report)
 app.include_router(subscription)
 
 
-# if __name__ == "__main__":
-#     host = os.getenv('HOST')
-#     port = int(os.getenv('PORT'))
-#     uvicorn.run(app=app, host=host, port=port)
+if __name__ == "__main__":
+    host = os.getenv('HOST')
+    port = int(os.getenv('PORT'))
+    uvicorn.run(app=app, host=host, port=port)

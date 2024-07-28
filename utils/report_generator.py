@@ -173,7 +173,9 @@ class ReportGenerator:
         )
 
         organ_system_chain = organ_system_prompt | self.llm_4_mini | output_parser
+        print("images util called")
         organ_system_response = organ_system_chain.invoke({"medical_terms": medical_terms, "human_organ_system": human_organ_system})
+        print("images util called finshed")
         organ_system_response = self.transform_dicts(organ_system_response['properties'])
         return organ_system_response
         
