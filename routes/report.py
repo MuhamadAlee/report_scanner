@@ -62,7 +62,7 @@ async def report_scanner(text:str, db: Session = Depends(get_db), current_user: 
 async def get_stored_data(user_id: int, db: Session = Depends(get_db)):
     return get_all_user_reports(db=db, user_id=user_id)
 
-@report.get("/get_report_by_id/{report_id}", dependencies=[Depends(get_current_user)])
+@report.get("/get_report_by_id/{report_id}")
 async def get_data_record(report_id: int, db: Session = Depends(get_db)):
     return get_report_data(db=db, report_id=report_id)
 
