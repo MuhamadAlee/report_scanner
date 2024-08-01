@@ -18,18 +18,13 @@ load_dotenv()
 app = FastAPI()
 
 
-origins = [
-    "http://localhost",
-    "http://localhost:8000",
-    # Add other origins as needed
-]
-
+# Allow all origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],  # Allows all origins
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
 )
 
 app.include_router(auth)
