@@ -39,11 +39,11 @@ async def file_report_scanner(file: UploadFile = File(...),db: Session = Depends
     response = rep_gen.get_llm_response(content)
     data = {"response": response['report'],
             "terms": response['medical_terms'],
-            "images_path": {"path1":"path"},
+            "images_path": response['images'],
             "user_id": current_user.id}
-    if (data['response']).lower() == "invalid report":
-        return data 
-    return store_report(db=db, data=data)
+    if isinstance(data['response'], dict):
+        return store_report(db=db, data=data) 
+    return data
 
 # Define endpoint
 @report.post("/report_scanner", dependencies=[Depends(get_current_user)])
@@ -54,9 +54,9 @@ async def report_scanner(text:str, db: Session = Depends(get_db), current_user: 
             "terms": response['medical_terms'],
             "images_path": response['images'],
             "user_id": current_user.id}
-    if (data['response']).lower() == "invalid report":
-        return data 
-    return store_report(db=db, data=data)
+    if isinstance(data['response'], dict):
+        return store_report(db=db, data=data) 
+    return data
 
 @report.get("/get_reports_for_user/{user_id}", response_model=List[ReportResponse], dependencies=[Depends(get_current_user)])
 async def get_stored_data(user_id: int, db: Session = Depends(get_db)):

@@ -9,7 +9,7 @@ class Report(Base):
     __tablename__ = "report"
     
     id = Column(Integer, primary_key=True, index=True)
-    response = Column(String)
+    response = Column(JSON)
     terms = Column(JSON)
     images_path = Column(JSON)
     user_id = Column(Integer, ForeignKey('user.id'))

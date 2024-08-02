@@ -3,14 +3,14 @@ from datetime import datetime
 from typing import Dict
 
 class Report(BaseModel):
-    response: str
+    response: Dict[str, str]
     terms: Dict[str, str]
     images_path: Dict[str, str]
     user_id: int
 
 class ReportResponse(BaseModel):
     id: int
-    response: str
+    response: Dict[str, str]
     terms: Dict[str, str]
     images_path: Dict[str, str]
     user_id: int

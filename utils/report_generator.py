@@ -62,30 +62,27 @@ class ReportGenerator:
         
         format_template = """
            You are a medical expert who is provided with a Medical Report delimited by triple quotes. You are suppose to perform following operations:
-            - Classify the medical report as medical diagnoses or random text. It's random text just return 'Invalid Report', otherwise perfrom below tasks.
+            - Classify the medical report as medical diagnoses or random text. It's random text just return 'report_satatus' as 'Invalid Report', otherwise perfrom below tasks.
+            - Place the 'report_status' as 'medical diagnoses' inside the JSON output first.
             - Structure the report into patient-centered interactive report.
             - IMPORTANT ! Becasue its medical report so don't try to change the wording of report, just structure it in readable manner.
             - Don't miss any section of the report.
-            - Your final response should only be in following format.
-
-            Format:
-            ```
-                Something: The Something of the Something
-                Something: The Something
-                .
-                .
-                .
-                Somethings: The Something
-            ```
+            - Your final response should only be in following JSON format.
+            - Extract the headings from the report and their values as well.
+            - Finally make object of JSON having multiple key value pairs e.g heading as key and its value.
+           Here's is the medical report : '''{report}'''
         """
-        format_prompt = ChatPromptTemplate.from_messages([
-            ("system", format_template),
-            ("user", """{report}""")
-        ])
-        output_parser = StrOutputParser()
+    
+
+        format_prompt = PromptTemplate(
+            template= format_template,
+            input_variables=["report"]
+        )
+        output_parser = JsonOutputParser()
 
         format_chain = format_prompt | self.llm_4_mini | output_parser
         formatted_report = format_chain.invoke({"report": report})
+
         return formatted_report
     
     def get_medical_terms(self, report):
@@ -178,23 +175,36 @@ class ReportGenerator:
         organ_system_response = self.transform_dicts(organ_system_response['properties'])
         return organ_system_response
         
+    def report_formatting_from_dictionary(self, report_dictionary, indent=0):
+        """
+        converts dictionary to string format
+        """
 
+        result = []
+        indent_str = '  ' * indent
+        for key, value in report_dictionary.items():
+            if isinstance(value, dict):
+                result.append(f"{indent_str}{key}:")
+                result.append(self.report_formatting_from_dictionary(value, indent + 1))
+            else:
+                result.append(f"{indent_str}{key}: {value}")
+        return "\n".join(result)
 
     def get_llm_response(self, report):
         """
         generates query to chat gpt
         """
-        medical_terms = {}
 
         formatted_report = self.get_formatted_report(report)
-        if "invalid report" in formatted_report.lower():
+        if "invalid report" in formatted_report['report_status'].lower():
             return {
-            "report": formatted_report,
-            "medical_terms": medical_terms
+                "report": "Invalid Report",
+                "medical_terms": [],
+                "images": []
             }
         
         try:
-            medical_terms = self.get_medical_terms(formatted_report)
+            medical_terms = self.get_medical_terms(self.report_formatting_from_dictionary(formatted_report['report']))
             terms = [dictionary['term'] for dictionary in medical_terms]
 
             human_organ_system = None
@@ -203,19 +213,21 @@ class ReportGenerator:
 
             images_path = self.identify_images(terms, human_organ_system)
 
-
-        except:
-            formatted_report = "Invalid Report"
-            medical_terms = []
-            images_path = []
-        finally:
-            final_response = {
-                "report": formatted_report,
+            return {
+                "report": formatted_report['report'],
                 "medical_terms": medical_terms,
                 "images": images_path
             }
+
+
+        except:
+            return{
+                "report": "Invalid Report",
+                "medical_terms":  [],
+                "images": []
+            }
+            
         
-        return final_response
         
 
 
