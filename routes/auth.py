@@ -25,8 +25,8 @@ def login(userdetails: OAuth2PasswordRequestForm = Depends(), db:Session = Depen
     if not user.is_active:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Disabled User')
     
-    access_token = create_access_token(data=user)
-    return {"access_token": access_token, "token_type": "bearer"}
+    access_token, user_id = create_access_token(data=user)
+    return {"user_id": user_id, "access_token": access_token, "token_type": "bearer"}
 
 @auth.post("/logout", dependencies=[Depends(get_current_user), Depends(get_current_token)])
 async def report_scanner(token: str = Depends(get_current_token)):
