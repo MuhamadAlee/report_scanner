@@ -38,7 +38,9 @@ def create_access_token(data: dict):
 
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, ALGORITHM)
 
-    return encoded_jwt, to_encode['id']
+    return {"user_id": to_encode['id'], "is_super_user":to_encode['is_superuser'], "access_token": encoded_jwt, "token_type": "bearer"}
+
+    
 
 def verify_token_access(token: str, credentials_exception):
     try:
