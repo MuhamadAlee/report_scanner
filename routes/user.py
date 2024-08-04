@@ -74,7 +74,7 @@ def update_existing_user(user_id: int, user: UserBase, db: Session = Depends(get
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Not authorized for this endpoint')
     return update_user(db=db, user_id=user_id, user=user)
 
-@user.delete("/delete_user/{user_id}", response_model=UserResponse, dependencies=[Depends(get_current_user)])
+@user.delete("/delete_user/{user_id}", dependencies=[Depends(get_current_user)])
 def delete_existing_user(user_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     if not current_user.is_superuser:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Not authorized for this endpoint')
