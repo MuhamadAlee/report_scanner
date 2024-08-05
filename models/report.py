@@ -14,6 +14,7 @@ class Report(Base):
     images_path = Column(JSON)
     user_id = Column(Integer, ForeignKey('user.id'))
     patient_name = Column(String, default= None)
+    report_code = Column(Integer, default= 1234)
     timestamp = Column(DateTime, default=datetime.utcnow)
     
     user = relationship("User")

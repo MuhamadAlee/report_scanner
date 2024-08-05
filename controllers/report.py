@@ -24,6 +24,7 @@ def store_report(db: Session, data:dict):
             terms=data['terms'],
             images_path=data['images_path'],
             user_id=data['user_id'],
+            report_code = data['report_code'],
             patient_name = data['patient_name'],
             timestamp=datetime.utcnow()
         )

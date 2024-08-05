@@ -6,6 +6,7 @@ from fastapi import HTTPException
 from datetime import datetime
 from models.subscription import Subscription
 from config.database import SessionLocal
+from utils.mail import send_report_notification
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -44,6 +45,17 @@ def update_specific_subscription(db:Session, id:int, subscription:Subscription):
         return db_subscription
     except:
         raise HTTPException(status_code=404, detail="Unable to update subscription")
+    
+def send_report_url_to_user(db:Session, report_code:int, email:str, url:str):
+    """
+    sends the email to the user for report availablitiy
+    """
+    
+    if send_report_notification(email, report_code, url) == "Email sent successfully!":
+        return {"message": "report sent successfully"}
+    else:
+        return {"message": "unable to send report"}
+    
 
 def update_or_create_subscription(user_id: int):
 

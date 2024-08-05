@@ -1,5 +1,6 @@
 import os
 import re
+import random
 import json
 import base64
 from pathlib import Path
@@ -192,6 +193,9 @@ class ReportGenerator:
             else:
                 result.append(f"{indent_str}{key}: {value}")
         return "\n".join(result)
+    def generate_unique_code(self):
+        """Generate a 4-digit unique code."""
+        return random.randint(1000, 9999)
 
     def get_llm_response(self, report):
         """
@@ -201,6 +205,7 @@ class ReportGenerator:
         formatted_report = self.get_formatted_report(report)
         if "invalid report" in formatted_report['report_status'].lower():
             return {
+                "report_code": 0,
                 "patient_name": None,
                 "report": "Invalid Report",
                 "medical_terms": [],
@@ -218,6 +223,7 @@ class ReportGenerator:
             images_path = self.identify_images(terms, human_organ_system)
 
             return {
+                "report_code": self.generate_unique_code(),
                 "patient_name": formatted_report['patient_name'],
                 "report": formatted_report['report'],
                 "medical_terms": medical_terms,
@@ -227,6 +233,7 @@ class ReportGenerator:
 
         except:
             return{
+                "report_code": 0,
                 "patient_name": None,
                 "report": "Invalid Report",
                 "medical_terms":  [],

@@ -29,3 +29,9 @@ async def update_subscription(subscription_id: int, subscription:SubscriptionBas
     if not current_user.is_superuser:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Not authorized for this endpoint')
     return update_specific_subscription(db=db, id=subscription_id, subscription = subscription)
+
+@subscription.put("/send_report_notification", dependencies=[Depends(get_current_user)])
+async def send_rport(report_code: int, email: str, url: str, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    if not current_user.is_superuser:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Not authorized for this endpoint')
+    return send_report_url_to_user(db=db,  email=email, report_code= report_code, url=url)

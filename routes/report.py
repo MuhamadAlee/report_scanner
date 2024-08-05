@@ -41,6 +41,7 @@ async def file_report_scanner(file: UploadFile = File(...),db: Session = Depends
             "terms": response['medical_terms'],
             "images_path": response['images'],
             "patient_name": response['patient_name'],
+            "report_code": response['report_code'],
             "user_id": current_user.id}
     if isinstance(data['response'], dict):
         return store_report(db=db, data=data) 
@@ -55,6 +56,7 @@ async def report_scanner(text:str, db: Session = Depends(get_db), current_user: 
             "terms": response['medical_terms'],
             "images_path": response['images'],
             "patient_name": response['patient_name'],
+            "report_code": response['report_code'],
             "user_id": current_user.id}
     if isinstance(data['response'], dict):
         return store_report(db=db, data=data) 
