@@ -40,6 +40,7 @@ async def file_report_scanner(file: UploadFile = File(...),db: Session = Depends
     data = {"response": response['report'],
             "terms": response['medical_terms'],
             "images_path": response['images'],
+            "patient_name": response['patient_name'],
             "user_id": current_user.id}
     if isinstance(data['response'], dict):
         return store_report(db=db, data=data) 
