@@ -3,6 +3,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
+from pathlib import Path
 from dotenv import load_dotenv
 _ = load_dotenv()
 
@@ -105,7 +106,7 @@ def send_report_notification(to_email, report_code, url):
     msg.attach(MIMEText(body, 'html'))
 
      # Attach the logo image (ensure the logo image is accessible)
-    with open(os.path.join('report_scanner', 'images','logo.jpg'), 'rb') as img_file:
+    with open(os.path.join(os.path.join(str(Path(__file__).resolve().parent.parent)), 'images','logo.jpg'), 'rb') as img_file:
         msg_image = MIMEImage(img_file.read())
         msg_image.add_header('Content-ID', '<logo>')
         msg.attach(msg_image)
