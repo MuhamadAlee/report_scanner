@@ -1,5 +1,6 @@
 from utils.util import hash_password
 from sqlalchemy.orm import Session
+from sqlalchemy import func
 from models.user import User
 from schemas.user import UserBase
 from fastapi import HTTPException
@@ -23,6 +24,7 @@ def store_report(db: Session, data:dict):
             terms=data['terms'],
             images_path=data['images_path'],
             user_id=data['user_id'],
+            patient_name = data['patient_name'],
             timestamp=datetime.utcnow()
         )
         
@@ -48,10 +50,19 @@ def get_report_data(db:Session, report_id:int):
     try:
         data_record = db.query(Report).filter(Report.id == report_id).first()
         if not data_record:
-            raise HTTPException(status_code=404, detail="Data record not found")
+            raise HTTPException(status_code=404, detail="No Report find")
         return data_record
     except:
         raise HTTPException(status_code=404, detail="No Report find")
+    
+def get_report_data_for_patient(db:Session, pname:str):
+    try:
+        data_record = db.query(Report).filter(func.lower(Report.patient_name).ilike(f'%{pname.lower()}%')).all()
+        if not data_record:
+            raise HTTPException(status_code=404, detail="No Report find")
+        return data_record
+    except:
+        raise HTTPException(status_code=404, detail="No Report find")   
 
 def delete_report(db:Session, report_id:int):
     try:

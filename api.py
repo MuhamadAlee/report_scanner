@@ -8,7 +8,7 @@ from fastapi.responses import JSONResponse
 from utils.report_generator import ReportGenerator
 from utils.reports_content_extractor import Extractor
 from fastapi.middleware.cors import CORSMiddleware
-
+from fastapi.staticfiles import StaticFiles
 from routes.user import user
 from routes.auth import auth
 from routes.report import report
@@ -31,7 +31,7 @@ app.include_router(auth)
 app.include_router(user)
 app.include_router(report)
 app.include_router(subscription)
-
+app.mount("/images", StaticFiles(directory=(os.path.join(str(Path(__file__).resolve().parent), "images"))), name="images")
 
 if __name__ == "__main__":
     host = os.getenv('HOST')

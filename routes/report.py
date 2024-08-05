@@ -53,6 +53,7 @@ async def report_scanner(text:str, db: Session = Depends(get_db), current_user: 
     data = {"response": response['report'],
             "terms": response['medical_terms'],
             "images_path": response['images'],
+            "patient_name": response['patient_name'],
             "user_id": current_user.id}
     if isinstance(data['response'], dict):
         return store_report(db=db, data=data) 
@@ -65,6 +66,10 @@ async def get_stored_data(user_id: int, db: Session = Depends(get_db)):
 @report.get("/get_report_by_id/{report_id}")
 async def get_data_record(report_id: int, db: Session = Depends(get_db)):
     return get_report_data(db=db, report_id=report_id)
+
+@report.get("/get_report_by_patient_name/{patient_name}")
+async def get_patient_report(patient_name: str, db: Session = Depends(get_db)):
+    return get_report_data_for_patient(db=db, pname=patient_name)
 
 @report.delete("/delte_report/{report_id}", response_model=dict, dependencies=[Depends(get_current_user)])
 async def delete_data_record(report_id: int, db: Session = Depends(get_db)):

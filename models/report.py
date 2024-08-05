@@ -13,6 +13,7 @@ class Report(Base):
     terms = Column(JSON)
     images_path = Column(JSON)
     user_id = Column(Integer, ForeignKey('user.id'))
+    patient_name = Column(String, default= None)
     timestamp = Column(DateTime, default=datetime.utcnow)
     
     user = relationship("User")

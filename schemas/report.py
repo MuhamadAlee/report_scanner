@@ -7,6 +7,7 @@ class Report(BaseModel):
     terms: Dict[str, str]
     images_path: Dict[str, str]
     user_id: int
+    patient_name: str
 
 class ReportResponse(BaseModel):
     id: int
@@ -14,6 +15,7 @@ class ReportResponse(BaseModel):
     terms: Dict[str, str]
     images_path: Dict[str, str]
     user_id: int
+    patient_name: str
     timestamp: datetime
 
     class Config:

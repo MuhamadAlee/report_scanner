@@ -65,6 +65,7 @@ class ReportGenerator:
             - Classify the medical report as medical diagnoses or random text. It's random text just return 'report_satatus' as 'Invalid Report', otherwise perfrom below tasks.
             - Place the 'report_status' as 'medical diagnoses' inside the JSON output first.
             - Structure the report into patient-centered interactive report.
+            - Extract the name of the patient from the given report and place it under key 'patient_name'.
             - IMPORTANT ! Becasue its medical report so don't try to change the wording of report, just structure it in readable manner.
             - Don't miss any section of the report.
             - Your final response should only be in following JSON format.
@@ -127,9 +128,11 @@ class ReportGenerator:
         responses = list()
         for item in list_of_dicts:
             if item["organ_system"] is not None:
-                image = (os.path.join(str(Path(__file__).resolve().parent.parent), "images", item["organ_system"], f'{item["organ_system_portion"]}.jpg'))
-                with open(image, "rb") as image_file:
-                    image = base64.b64encode(image_file.read()).decode('utf-8')
+                # image = (os.path.join(str(Path(__file__).resolve().parent.parent), "images", item["organ_system"], f'{item["organ_system_portion"]}.jpg'))
+                # with open(image, "rb") as image_file:
+                #     image = base64.b64encode(image_file.read()).decode('utf-8')
+
+                image = os.path.join(os.getenv('HOST_URL'),"images", item["organ_system"], f'{item["organ_system_portion"]}.jpg')
             else:
                 image = None
 
@@ -198,6 +201,7 @@ class ReportGenerator:
         formatted_report = self.get_formatted_report(report)
         if "invalid report" in formatted_report['report_status'].lower():
             return {
+                "patient_name": None,
                 "report": "Invalid Report",
                 "medical_terms": [],
                 "images": []
@@ -214,6 +218,7 @@ class ReportGenerator:
             images_path = self.identify_images(terms, human_organ_system)
 
             return {
+                "patient_name": formatted_report['patient_name'],
                 "report": formatted_report['report'],
                 "medical_terms": medical_terms,
                 "images": images_path
@@ -222,6 +227,7 @@ class ReportGenerator:
 
         except:
             return{
+                "patient_name": None,
                 "report": "Invalid Report",
                 "medical_terms":  [],
                 "images": []
