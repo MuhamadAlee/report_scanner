@@ -203,6 +203,7 @@ class ReportGenerator:
         """
 
         formatted_report = self.get_formatted_report(report)
+        print(" -------------------- report formatting done --------------------")
         if "invalid report" in formatted_report['report_status'].lower():
             return {
                 "report_code": 0,
@@ -215,12 +216,13 @@ class ReportGenerator:
         try:
             medical_terms = self.get_medical_terms(self.report_formatting_from_dictionary(formatted_report['report']))
             terms = [dictionary['term'] for dictionary in medical_terms]
-
+            print("-------------------- medical terms extraction done --------------------")
             human_organ_system = None
             with open( os.path.join(SCRIPT_DIR, os.getenv("ORGAN_SYSTEM_MAPPING_JSON")), 'r') as file:
                 human_organ_system = json.load(file)
 
             images_path = self.identify_images(terms, human_organ_system)
+            print("-------------------- images generation done --------------------")
 
             return {
                 "report_code": self.generate_unique_code(),
