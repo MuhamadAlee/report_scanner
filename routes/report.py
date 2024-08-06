@@ -75,8 +75,9 @@ async def get_patient_report(report_id: int, report_code:int, db: Session = Depe
     report = get_report_data(db=db, report_id=report_id)
     try:
         if report.report_code == report_code:
-            return report_code
-    finally:
+            return report
+        return {"message": "un-authorized patient"}
+    except:
         return {"message": "un-authorized patient"}
 
 @report.get("/get_report_by_patient_name/{patient_name}", dependencies=[Depends(get_current_user)])
