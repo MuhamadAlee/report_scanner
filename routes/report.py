@@ -73,9 +73,11 @@ async def get_data_record(report_id: int, db: Session = Depends(get_db)):
 @report.get("/get_patient_report/{report_id}/{report_code}")
 async def get_patient_report(report_id: int, report_code:int, db: Session = Depends(get_db)):
     report = get_report_data(db=db, report_id=report_id)
-    if report['report_code'] == report_code:
-        return report_code
-    return {"message": "un-authorized patient"}
+    try:
+        if report.report_code == report_code:
+            return report_code
+    finally:
+        return {"message": "un-authorized patient"}
 
 @report.get("/get_report_by_patient_name/{patient_name}", dependencies=[Depends(get_current_user)])
 async def get_patient_report(patient_name: str, db: Session = Depends(get_db)):
