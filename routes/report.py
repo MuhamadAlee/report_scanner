@@ -66,11 +66,18 @@ async def report_scanner(text:str, db: Session = Depends(get_db), current_user: 
 async def get_stored_data(user_id: int, db: Session = Depends(get_db)):
     return get_all_user_reports(db=db, user_id=user_id)
 
-@report.get("/get_report_by_id/{report_id}")
+@report.get("/get_report_by_id/{report_id}", dependencies=[Depends(get_current_user)])
 async def get_data_record(report_id: int, db: Session = Depends(get_db)):
     return get_report_data(db=db, report_id=report_id)
 
-@report.get("/get_report_by_patient_name/{patient_name}")
+@report.get("/get_patient_report/{report_id}/{report_code}")
+async def get_patient_report(report_id: int, report_code:int, db: Session = Depends(get_db)):
+    report = get_report_data(db=db, report_id=report_id)
+    if report['report_code'] == report_code:
+        return report_code
+    return {"message": "un-authorized patient"}
+
+@report.get("/get_report_by_patient_name/{patient_name}", dependencies=[Depends(get_current_user)])
 async def get_patient_report(patient_name: str, db: Session = Depends(get_db)):
     return get_report_data_for_patient(db=db, pname=patient_name)
 
