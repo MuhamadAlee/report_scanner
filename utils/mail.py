@@ -37,10 +37,10 @@ def send_email(to_email, month, num_requests, charges):
             <li><strong>Charges:</strong> £{charges:.2f}</li>
         </ul>
         <p>Thank you for using our service!</p>
-        <p>Best Regards,<br>Translaited</p>
+        <p>Best Regards,<br>Translaited ltd</p>
         <footer>
             <hr>
-            <p>If you have any questions, please contact us at <a href="mailto:{sender_email}">{sender_email}</a></p>
+            <p><a href="https://translaited.com/">translaited.com</a></p>
         </footer>
     </body>
     </html>
@@ -94,10 +94,10 @@ def send_report_notification(to_email, report_code, url):
         Your verification code is <b>{report_code}</b>. Please don't share it with anyone.</p>
        
         <p>Thank you for using our service!</p>
-        <p>Best Regards,<br>Translaited</p>
+        <p>Best Regards,<br>Translaited ltd</p>
         <footer>
             <hr>
-            <p>If you have any questions, please contact us at <a href="mailto:{sender_email}">{sender_email}</a></p>
+            <p><a href="https://translaited.com/">translaited.com</a></p>
         </footer>
     </body>
     </html>
