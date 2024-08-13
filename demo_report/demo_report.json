@@ -1,0 +1,260 @@
+{
+  "id": 45,
+  "images_path": [
+    {
+      "term": "persistent headaches",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "dizziness",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "hypertension",
+      "image": "https://backend.translaited.com/images/circulartory_system/blood_vessels.jpg"
+    },
+    {
+      "term": "Non-contrast axial CT scan",
+      "image": null
+    },
+    {
+      "term": "acute intracranial hemorrhage",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "mass effect",
+      "image": null
+    },
+    {
+      "term": "midline shift",
+      "image": null
+    },
+    {
+      "term": "ventricular system",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "hydrocephalus",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "infarcts",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "abnormal low or high attenuation",
+      "image": null
+    },
+    {
+      "term": "brain parenchyma",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "basal ganglia",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "thalamus",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "brainstem",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "extra-axial spaces",
+      "image": null
+    },
+    {
+      "term": "subarachnoid spaces",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "cisterns",
+      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "extra-axial fluid collections",
+      "image": null
+    },
+    {
+      "term": "fracture",
+      "image": null
+    },
+    {
+      "term": "destructive bony lesion",
+      "image": null
+    },
+    {
+      "term": "paranasal sinuses",
+      "image": null
+    },
+    {
+      "term": "mastoid air cells",
+      "image": null
+    },
+    {
+      "term": "soft tissue masses",
+      "image": null
+    },
+    {
+      "term": "orbits",
+      "image": null
+    },
+    {
+      "term": "temporal bones",
+      "image": null
+    },
+    {
+      "term": "MRI",
+      "image": null
+    },
+    {
+      "term": "clinical correlation",
+      "image": null
+    }
+  ],
+  "patient_name": "John Doe",
+  "timestamp": "2024-08-13T22:26:37.022085",
+  "terms": [
+    {
+      "term": "persistent headaches",
+      "definition": "Persistent headaches refer to ongoing or chronic pain in the head that lasts for an extended period of time. Unlike occasional headaches, which may be triggered by stress, dehydration, or other factors, persistent headaches can be a sign of an underlying medical condition. They can vary in intensity and may be accompanied by other symptoms such as nausea, sensitivity to light, or dizziness. It is important for individuals experiencing persistent headaches to seek medical evaluation to determine the cause and appropriate treatment."
+    },
+    {
+      "term": "dizziness",
+      "definition": "Dizziness is a term used to describe a range of sensations, including feeling faint, woozy, weak, or unsteady. It can occur as a result of various factors, including inner ear problems, dehydration, low blood pressure, or neurological conditions. Dizziness can be transient or chronic and may be accompanied by other symptoms such as nausea, vomiting, or balance issues. Understanding the underlying cause of dizziness is crucial for effective management and treatment."
+    },
+    {
+      "term": "hypertension",
+      "definition": "Hypertension, commonly known as high blood pressure, is a medical condition where the force of the blood against the artery walls is consistently too high. This condition can lead to serious health problems, including heart disease, stroke, and kidney damage. Hypertension often has no symptoms, which is why it is sometimes referred to as a 'silent killer.' It can be managed through lifestyle changes, such as diet and exercise, and may also require medication to help lower blood pressure to a safer level."
+    },
+    {
+      "term": "Non-contrast axial CT scan",
+      "definition": "A non-contrast axial CT scan is a type of imaging test that uses X-rays to create detailed cross-sectional images of the body, specifically the head in this case. 'Non-contrast' means that no contrast dye is used to enhance the images, which is often done to highlight certain structures or abnormalities. The axial view refers to the horizontal slices of the body that the scan produces, allowing for a comprehensive view of the brain and surrounding structures. This type of scan is commonly used to evaluate conditions such as bleeding, tumors, or structural abnormalities in the brain."
+    },
+    {
+      "term": "acute intracranial hemorrhage",
+      "definition": "Acute intracranial hemorrhage refers to bleeding that occurs within the skull, which can happen suddenly and can be life-threatening. This type of hemorrhage can result from various causes, including trauma, aneurysms, or blood vessel malformations. Symptoms may include severe headache, confusion, weakness, or loss of consciousness. Prompt medical attention is critical for diagnosis and treatment, which may involve surgery or other interventions to stop the bleeding and relieve pressure on the brain."
+    },
+    {
+      "term": "mass effect",
+      "definition": "Mass effect is a term used in medical imaging to describe the displacement of brain structures due to the presence of a mass, such as a tumor, hematoma, or abscess. When a mass effect is present, it can push adjacent brain tissue away, leading to potential complications such as increased intracranial pressure or neurological deficits. Identifying mass effect on imaging studies is crucial for determining the nature of the mass and planning appropriate treatment."
+    },
+    {
+      "term": "midline shift",
+      "definition": "Midline shift refers to the displacement of the brain's midline structures, which can occur due to increased pressure from a mass or swelling in the brain. This shift can indicate serious conditions such as a large tumor, hemorrhage, or edema. A midline shift is often assessed through imaging studies like CT or MRI, and its presence can guide urgent medical interventions to relieve pressure and prevent further brain injury."
+    },
+    {
+      "term": "ventricular system",
+      "definition": "The ventricular system of the brain consists of a series of interconnected cavities filled with cerebrospinal fluid (CSF). These ventricles help cushion the brain, remove waste, and provide nutrients. The system includes the lateral ventricles, third ventricle, and fourth ventricle. Abnormalities in the ventricular system, such as enlargement or obstruction, can indicate conditions like hydrocephalus or brain injury, making its assessment important in neurological evaluations."
+    },
+    {
+      "term": "hydrocephalus",
+      "definition": "Hydrocephalus is a medical condition characterized by an accumulation of cerebrospinal fluid (CSF) within the ventricles of the brain, leading to increased pressure inside the skull. This condition can occur due to various reasons, including obstruction of CSF flow, overproduction of CSF, or impaired absorption. Symptoms may include headaches, nausea, balance issues, and cognitive difficulties. Treatment often involves the placement of a shunt to drain excess fluid and relieve pressure on the brain."
+    },
+    {
+      "term": "infarcts",
+      "definition": "Infarcts refer to areas of tissue that have died due to a lack of blood supply, often resulting from a blockage in the blood vessels. In the brain, this can lead to a stroke, which can cause significant neurological deficits depending on the location and extent of the infarct. Identifying infarcts through imaging studies is crucial for determining the cause of symptoms and planning appropriate treatment to restore blood flow and minimize damage."
+    },
+    {
+      "term": "abnormal low or high attenuation",
+      "definition": "In the context of CT imaging, attenuation refers to the degree to which a substance reduces the intensity of X-rays as they pass through it. Abnormal low attenuation areas may indicate the presence of fluid or edema, while high attenuation areas may suggest the presence of calcifications or hemorrhage. Evaluating attenuation levels helps radiologists identify various conditions and abnormalities within the brain and other tissues."
+    },
+    {
+      "term": "brain parenchyma",
+      "definition": "Brain parenchyma refers to the functional tissue of the brain, which includes neurons and glial cells. This tissue is responsible for processing information and supporting brain function. When evaluating brain health, the condition of the parenchyma is critical, as abnormalities can indicate various neurological conditions, including tumors, strokes, or degenerative diseases."
+    },
+    {
+      "term": "basal ganglia",
+      "definition": "The basal ganglia are a group of nuclei located deep within the brain that play a crucial role in coordinating movement and regulating various functions, including motor control, cognition, and emotions. Dysfunction in the basal ganglia can lead to movement disorders such as Parkinson's disease or Huntington's disease. Imaging studies often assess the basal ganglia for signs of atrophy or other abnormalities that may indicate neurological conditions."
+    },
+    {
+      "term": "thalamus",
+      "definition": "The thalamus is a small structure located near the center of the brain that acts as a relay station for sensory and motor signals to the cerebral cortex. It plays a key role in regulating consciousness, sleep, and alertness. Damage or dysfunction in the thalamus can lead to various neurological symptoms, including sensory disturbances and changes in consciousness."
+    },
+    {
+      "term": "brainstem",
+      "definition": "The brainstem is the lower part of the brain that connects the brain to the spinal cord. It is responsible for regulating many vital functions, including heart rate, breathing, and blood pressure. The brainstem also controls reflexes and is involved in the regulation of sleep and wakefulness. Damage to the brainstem can have serious consequences, affecting basic life functions and leading to severe neurological deficits."
+    },
+    {
+      "term": "extra-axial spaces",
+      "definition": "Extra-axial spaces refer to the areas surrounding the brain, including the subarachnoid space, which is filled with cerebrospinal fluid. These spaces are important for cushioning the brain and providing a pathway for CSF circulation. Evaluating the extra-axial spaces during imaging studies helps identify potential issues such as bleeding, infections, or fluid collections that may affect brain health."
+    },
+    {
+      "term": "subarachnoid spaces",
+      "definition": "The subarachnoid spaces are the areas between the arachnoid membrane and the pia mater, two of the protective layers surrounding the brain and spinal cord. This space is filled with cerebrospinal fluid (CSF), which helps cushion the brain and spinal cord, providing protection against injury. Abnormalities in the subarachnoid spaces, such as bleeding or infection, can lead to serious neurological conditions and require prompt medical evaluation."
+    },
+    {
+      "term": "cisterns",
+      "definition": "Cisterns are large spaces within the subarachnoid space that contain cerebrospinal fluid (CSF). They are located around the brain and spinal cord and serve as reservoirs for CSF, helping to cushion and protect the central nervous system. The presence of fluid in the cisterns is normal, but any abnormal accumulation or changes can indicate underlying medical issues, such as hemorrhage or infection."
+    },
+    {
+      "term": "extra-axial fluid collections",
+      "definition": "Extra-axial fluid collections refer to abnormal accumulations of fluid in the spaces surrounding the brain, outside of the brain tissue itself. These collections can occur due to various reasons, including trauma, infection, or bleeding. Identifying extra-axial fluid collections through imaging studies is important for diagnosing conditions such as hematomas or abscesses and determining the appropriate treatment."
+    },
+    {
+      "term": "fracture",
+      "definition": "A fracture is a medical term used to describe a break in a bone. Fractures can occur due to trauma, such as a fall or accident, or from conditions that weaken the bones, such as osteoporosis. Symptoms of a fracture may include pain, swelling, and difficulty moving the affected area. Treatment for fractures often involves immobilization with a cast or splint, and in some cases, surgery may be required to realign the bones."
+    },
+    {
+      "term": "destructive bony lesion",
+      "definition": "A destructive bony lesion refers to an abnormal area of bone that has been damaged or eroded, often due to disease processes such as infection, tumors, or metabolic disorders. These lesions can weaken the structural integrity of the bone and may lead to fractures or other complications. Imaging studies are essential for identifying and characterizing bony lesions, which can guide treatment decisions."
+    },
+    {
+      "term": "paranasal sinuses",
+      "definition": "Paranasal sinuses are air-filled spaces located within the bones of the face and skull, surrounding the nasal cavity. They play a role in reducing the weight of the skull, producing mucus, and contributing to voice resonance. Infections or blockages in the sinuses can lead to sinusitis, which may cause symptoms such as facial pain, congestion, and headaches. Evaluating the paranasal sinuses during imaging studies is important for diagnosing sinus-related conditions."
+    },
+    {
+      "term": "mastoid air cells",
+      "definition": "Mastoid air cells are small, air-filled spaces located within the mastoid process, which is the bony prominence behind the ear. These cells are part of the mastoid bone and are connected to the middle ear. They help regulate air pressure and drain fluid from the middle ear. Infections or inflammation in the mastoid air cells can lead to mastoiditis, which may require medical treatment. Imaging studies can help assess the condition of the mastoid air cells."
+    },
+    {
+      "term": "soft tissue masses",
+      "definition": "Soft tissue masses refer to abnormal growths or lumps that occur in the soft tissues of the body, which include muscles, fat, blood vessels, and connective tissues. These masses can be benign (non-cancerous) or malignant (cancerous) and may arise from various conditions, including infections, tumors, or inflammatory processes. Evaluating soft tissue masses through imaging studies or biopsies is essential for determining their nature and planning appropriate treatment."
+    },
+    {
+      "term": "orbits",
+      "definition": "The orbits are the bony cavities in the skull that house the eyes and associated structures, such as muscles, nerves, and blood vessels. The orbits protect the eyes and allow for movement and function. Abnormalities in the orbits, such as fractures, tumors, or infections, can affect vision and eye health. Imaging studies are often used to assess the condition of the orbits in cases of trauma or disease."
+    },
+    {
+      "term": "temporal bones",
+      "definition": "The temporal bones are located on the sides of the skull and house structures important for hearing and balance, including the inner ear. They also contain the mastoid air cells. Abnormalities in the temporal bones can lead to hearing loss, balance issues, or infections. Imaging studies help evaluate the temporal bones for signs of disease or injury."
+    },
+    {
+      "term": "MRI",
+      "definition": "Magnetic Resonance Imaging (MRI) is a non-invasive imaging technique that uses strong magnets and radio waves to create detailed images of the body's internal structures, including the brain. Unlike CT scans, MRI does not use ionizing radiation and is particularly useful for visualizing soft tissues, such as the brain, muscles, and organs. MRI is often used to diagnose a variety of conditions, including tumors, brain injuries, and degenerative diseases, and can provide valuable information for treatment planning."
+    },
+    {
+      "term": "clinical correlation",
+      "definition": "Clinical correlation refers to the process of comparing and integrating the findings from medical tests, such as imaging studies, with the patient's clinical history, symptoms, and physical examination. This approach helps healthcare providers make accurate diagnoses and develop effective treatment plans. Clinical correlation is essential in ensuring that the results of tests are interpreted in the context of the patient's overall health and medical condition."
+    }
+  ],
+  "response": {
+    "Patient Information": {
+      "Name": "John Doe",
+      "Age": "55 years",
+      "Sex": "Male",
+      "Patient ID": "123456",
+      "Date of Examination": "July 28, 2024",
+      "Referring Physician": "Dr. Jane Smith"
+    },
+    "Clinical History": {
+      "Indication": "Evaluation for persistent headaches and recent onset of dizziness. History of hypertension."
+    },
+    "Examination Technique": "Non-contrast axial CT scan of the head was performed using standard protocol.",
+    "Findings": {
+      "Brain Parenchyma": "No acute intracranial hemorrhage is identified. There is no evidence of mass effect or midline shift. Ventricular system is within normal limits; no evidence of hydrocephalus. No infarcts or areas of abnormal low or high attenuation are seen in the brain parenchyma. Basal ganglia, thalami, and brainstem structures appear unremarkable.",
+      "Extra-Axial Spaces": "Subarachnoid spaces and cisterns are within normal limits. No extra-axial fluid collections are noted.",
+      "Bones": "No evidence of fracture or destructive bony lesion. Paranasal sinuses and mastoid air cells are clear.",
+      "Soft Tissues": "No abnormal soft tissue masses are identified. Orbits and visualized portions of the temporal bones are unremarkable."
+    },
+    "Impression": "Normal non-contrast CT scan of the head. No acute intracranial pathology identified.",
+    "Recommendations": "Correlate clinically and consider MRI if symptoms persist or worsen for further evaluation.",
+    "Radiologist Name": "Dr Zaheer Khonat",
+    "Signature": "[Radiologist's Signature]",
+    "Date": "July 28, 2024"
+  },
+  "user_id": 21,
+  "report_code": 9851
+}

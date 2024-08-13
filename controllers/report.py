@@ -1,3 +1,4 @@
+import json
 from utils.util import hash_password
 from sqlalchemy.orm import Session
 from sqlalchemy import func
@@ -7,7 +8,9 @@ from fastapi import HTTPException
 from datetime import datetime
 from models.report import Report
 from controllers.subscription import *
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 def store_report(db: Session, data:dict):
     try:
@@ -77,3 +80,12 @@ def delete_report(db:Session, report_id:int):
         return {"message": "Data record deleted successfully"}
     except:
         raise HTTPException(status_code=422, detail="Unable to delete report")
+    
+def get_demo_report():
+    try:
+        data = None
+        with open(f'{BASE_DIR}/demo_report/demo_report.json', 'r') as file:
+            data = json.load(file)
+        return data
+    except:
+        raise HTTPException(status_code=404, detail='demo report not found')

@@ -87,3 +87,7 @@ async def get_patient_report(patient_name: str, db: Session = Depends(get_db)):
 @report.delete("/delte_report/{report_id}", response_model=dict, dependencies=[Depends(get_current_user)])
 async def delete_data_record(report_id: int, db: Session = Depends(get_db)):
     return delete_report(db=db, report_id=report_id)
+
+@report.get("/demo_report/")
+async def fetch_demo_report():
+    return get_demo_report()

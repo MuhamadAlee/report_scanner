@@ -99,11 +99,12 @@ class ReportGenerator:
         terms_template = """
            You are a medical expert who is provided whose task is to provide detailed explaination of each and every terms used in provided Medical Report delimited by triple quotes. You are suppose to perform following operations:
             - Extract each and every medical term or complex term seperately which is used inside the report. Make sure you don't miss any medical term.
+            - CARFULL! Don't miss any medical word, medical term, or medical jorgan used inside the report. Its super important to cover all terms or words.
             - Prepare plain layman english explaination or definition of these terms.
             - Definition or explaination of medical term or complex term must be detailed not 1 liners.
             - Don't miss any term of the report. But avoid adding explaination for too obvious terms e.g name date etc.
             - Consider case senstivity for medical terms as keys of dictionary must exactly match with terms used in medical report.
-            - IMPORTANT!! As this is medical report so please don't miss any complex term or medical term.
+            - IMPORTANT!! As this is medical report so please don't miss any complex term or medical term or even a single medical word.
             - Your final response must be according to the below instructions.
                 \n{format_instructions}
             Here's is the medical report : '''{report}'''
