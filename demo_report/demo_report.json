@@ -3,15 +3,15 @@
   "images_path": [
     {
       "term": "persistent headaches",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "dizziness",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "hypertension",
-      "image": "https://backend.translaited.com/images/circulartory_system/blood_vessels.jpg"
+      "image": "https://translaited.backend.skannr.com/images/circulartory_system/blood_vessels.jpg"
     },
     {
       "term": "Non-contrast axial CT scan",
@@ -19,7 +19,7 @@
     },
     {
       "term": "acute intracranial hemorrhage",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "mass effect",
@@ -31,15 +31,15 @@
     },
     {
       "term": "ventricular system",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "hydrocephalus",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "infarcts",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "abnormal low or high attenuation",
@@ -47,19 +47,19 @@
     },
     {
       "term": "brain parenchyma",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "basal ganglia",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "thalamus",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "brainstem",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "extra-axial spaces",
@@ -67,11 +67,11 @@
     },
     {
       "term": "subarachnoid spaces",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "cisterns",
-      "image": "https://backend.translaited.com/images/nervous_system/brain.jpg"
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
       "term": "extra-axial fluid collections",
