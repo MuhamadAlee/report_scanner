@@ -1,214 +1,271 @@
 {
   "response": {
-    "MRI Head Scan Report": {
-      "Patient ID": "123456",
-      "Date of Examination": "2024-06-13",
-      "Referring Physician": "Dr. Smith",
-      "Radiologist": "Dr. Jane Miller",
-      "Indication": "The patient presents with persistent headaches, dizziness, and occasional nausea. Symptoms suggestive of potential intracranial pathology, necessitating further investigation.",
-      "Technique": "MRI of the head was performed using standard protocol sequences including T1-weighted, T2-weighted, FLAIR, and contrast-enhanced images.",
-      "Report": {
-        "Findings": {
-          "Cerebellum": "A solitary, well-defined, hypointense lesion on T1 and hyperintense on T2 and FLAIR sequences, measuring approximately 2 cm in diameter, is noted in the left cerebellar hemisphere. Post-contrast images demonstrate heterogeneous enhancement suggestive of a neoplastic process. There is no evidence of surrounding edema or mass effect.",
-          "Ventricles and CSF Spaces": "The ventricular system is normal in size and configuration. No signs of hydrocephalus.",
-          "Brain Parenchyma": "The remaining brain parenchyma appears normal. No other focal lesions, hemorrhages, or abnormal signal intensities are observed.",
-          "Brainstem and Cranial Nerves": "The brainstem and cranial nerves show no abnormalities.",
-          "Sinuses and Orbits": "No significant abnormalities detected in the paranasal sinuses or orbits.",
-          "Skull and Scalp": "No abnormalities noted in the skull bones or scalp."
-        }
-      },
-      "Conclusion": "A 2 cm lesion in the left cerebellar hemisphere, with imaging characteristics suggestive of a neoplasm. Further evaluation with neurosurgical consultation and possible biopsy is recommended to determine the exact nature and appropriate management of the lesion. The remainder of the MRI head scan is within normal limits.",
-      "Signature": "Dr. Jane Miller, MD",
-      "Date": "2024-06-13"
-    }
+    "MRI Report": "",
+    "Referring Physician": "Dr. Zaheer Khonat, MD",
+    "Date of Examination": "[Insert Date]",
+    "Study": "Brain MRI with Contrast",
+    "Clinical Indication": "Persistent headache, dizziness, visual disturbances. Rule out intracranial pathology.",
+    "Findings": {
+      "Cerebral Parenchyma": "Normal gray-white matter differentiation. No evidence of cortical or subcortical infarction, demyelination, gliosis, or focal lesions. The basal ganglia, thalamus, and brainstem are unremarkable.",
+      "Ventricular System": "The lateral, third, and fourth ventricles are normal in size and configuration. No signs of hydrocephalus, midline shift, or ventricular asymmetry. The surrounding sulci and cisterns are within normal limits, with no effacement.",
+      "Posterior Fossa and Brainstem": "The cerebellum, including the cerebellar tonsils, is normally positioned with no signs of herniation. The brainstem shows normal signal characteristics with no evidence of structural abnormalities or demyelination.",
+      "Vascular Structures": "No intracranial hemorrhage, vascular malformations, or evidence of dural venous sinus thrombosis. The major intracranial arteries are patent with normal flow voids.",
+      "Diffusion-Weighted Imaging (DWI)": "No areas of restricted diffusion. The ADC map corroborates these findings, with no abnormalities detected, ruling out acute infarction.",
+      "Post-Contrast Imaging": "No abnormal enhancement observed in the brain parenchyma, meninges, or along the cranial nerves. The pituitary gland, pineal gland, and orbits appear normal with no masses or lesions.",
+      "Sinuses and Orbits": "The paranasal sinuses are clear, with no mucosal thickening or fluid levels. The orbits, including the optic nerves and extraocular muscles, are normal in appearance, with no signs of inflammation or neoplasm.",
+      "Cranial Nerves": "The visualized portions of the cranial nerves, including the optic chiasm and trigeminal nerves, show no abnormal signal or enhancement."
+    },
+    "Impression": "Normal Brain MRI. No evidence of intracranial pathology, including ischemia, hemorrhage, neoplasm, or demyelination.",
+    "Recommendations": "Clinical correlation is recommended. Follow-up imaging or further neurological evaluation may be considered if symptoms persist."
   },
   "terms": [
     {
       "term": "MRI",
-      "definition": "Magnetic Resonance Imaging (MRI) is a medical imaging technique used to visualize detailed internal structures of the body. It employs strong magnetic fields and radio waves to generate images of organs and tissues, particularly useful for imaging the brain, spinal cord, and joints. Unlike X-rays or CT scans, MRI does not use ionizing radiation, making it a safer option for repeated imaging."
+      "definition": "Magnetic Resonance Imaging (MRI) is a medical imaging technique used to visualize internal structures of the body in detail. It uses strong magnets and radio waves to create images of organs and tissues, particularly useful for examining the brain, spinal cord, and joints. Unlike X-rays or CT scans, MRI does not use ionizing radiation, making it a safer option for many patients."
     },
     {
-      "term": "Head Scan",
-      "definition": "A head scan refers to imaging studies specifically focused on the head, which can include the brain, skull, and surrounding structures. This type of scan is often performed to diagnose conditions such as tumors, strokes, or other neurological disorders."
+      "term": "Cerebral Parenchyma",
+      "definition": "Cerebral parenchyma refers to the functional tissue of the brain, which includes the neurons (nerve cells) and glial cells (supporting cells). This tissue is responsible for processing information and performing various brain functions. The health of the cerebral parenchyma is crucial for overall brain function, and abnormalities can indicate various neurological conditions."
     },
     {
-      "term": "Intracranial pathology",
-      "definition": "Intracranial pathology refers to any disease or abnormality that occurs within the cranial cavity, which houses the brain. This can include a wide range of conditions such as tumors, infections, hemorrhages, or structural abnormalities that may affect brain function."
+      "term": "Gray-White Matter Differentiation",
+      "definition": "Gray-white matter differentiation is a term used to describe the distinction between gray matter and white matter in the brain. Gray matter contains the cell bodies of neurons and is involved in processing and cognition, while white matter consists of myelinated axons that connect different brain regions. Normal differentiation indicates healthy brain structure."
     },
     {
-      "term": "Technique",
-      "definition": "In the context of medical imaging, technique refers to the specific methods and protocols used to perform the imaging study. This includes the type of imaging sequences employed, the positioning of the patient, and the settings of the imaging equipment to ensure optimal visualization of the area of interest."
+      "term": "Cortical Infarction",
+      "definition": "Cortical infarction refers to an area of dead tissue in the brain's cortex due to a lack of blood supply, often caused by a blockage in a blood vessel. This condition can lead to various neurological deficits depending on the area affected, such as weakness, speech difficulties, or sensory loss."
     },
     {
-      "term": "T1-weighted",
-      "definition": "T1-weighted imaging is a type of MRI sequence that provides images where fat appears bright and water appears darker. This sequence is particularly useful for assessing anatomical structures and detecting certain types of lesions, as it highlights differences in tissue composition."
+      "term": "Subcortical Infarction",
+      "definition": "Subcortical infarction is similar to cortical infarction but occurs in the areas of the brain located beneath the cortex. These infarctions can affect the white matter and may lead to cognitive impairments, motor dysfunction, or other neurological symptoms depending on the specific location and extent of the damage."
     },
     {
-      "term": "T2-weighted",
-      "definition": "T2-weighted imaging is another MRI sequence where water appears bright and fat appears darker. This sequence is particularly effective for identifying edema, inflammation, and other pathological changes in tissues, making it valuable for diagnosing various conditions."
+      "term": "Demyelination",
+      "definition": "Demyelination is the process in which the protective myelin sheath that surrounds nerve fibers is damaged or destroyed. This can disrupt the normal transmission of electrical signals along the nerves, leading to various neurological symptoms. Conditions such as multiple sclerosis are characterized by demyelination."
     },
     {
-      "term": "FLAIR",
-      "definition": "Fluid-Attenuated Inversion Recovery (FLAIR) is a specialized MRI sequence that suppresses the signal from cerebrospinal fluid (CSF) to enhance the visibility of lesions in the brain. It is particularly useful for detecting lesions that may be obscured by the bright signal of CSF in standard T2-weighted images."
+      "term": "Gliosis",
+      "definition": "Gliosis is a reactive process in the brain that occurs in response to injury or disease. It involves the proliferation of glial cells, which are supportive cells in the nervous system. While gliosis can be a normal response to injury, excessive gliosis can indicate ongoing damage and may contribute to neurological dysfunction."
     },
     {
-      "term": "Contrast-enhanced images",
-      "definition": "Contrast-enhanced images are MRI scans that utilize a contrast agent, typically gadolinium-based, to improve the visibility of certain structures or abnormalities. The contrast agent helps to highlight areas of increased blood flow or abnormal tissue characteristics, aiding in the diagnosis of conditions such as tumors or inflammation."
+      "term": "Focal Lesions",
+      "definition": "Focal lesions are localized areas of abnormal tissue in the brain that can result from various causes, including tumors, infections, or trauma. The presence of focal lesions can indicate underlying pathology and may require further investigation to determine their nature and significance."
     },
     {
-      "term": "Cerebellum",
-      "definition": "The cerebellum is a major part of the brain located at the back of the skull. It is responsible for coordinating voluntary movements, balance, and motor control. Abnormalities in the cerebellum can lead to issues with coordination and balance."
+      "term": "Basal Ganglia",
+      "definition": "The basal ganglia are a group of nuclei in the brain that are involved in the regulation of movement, coordination, and various cognitive functions. They play a crucial role in motor control and are associated with several neurological disorders, including Parkinson's disease and Huntington's disease."
     },
     {
-      "term": "Hypointense lesion",
-      "definition": "A hypointense lesion is an area on an MRI image that appears darker than the surrounding tissue. This can indicate various conditions, including tumors, cysts, or areas of necrosis, depending on the context and imaging sequence used."
-    },
-    {
-      "term": "Hyperintense",
-      "definition": "Hyperintense refers to areas on an MRI image that appear brighter than the surrounding tissues. This can indicate the presence of fluid, edema, or certain types of lesions, and is often used to describe findings in T2-weighted or FLAIR images."
-    },
-    {
-      "term": "Neoplastic process",
-      "definition": "A neoplastic process refers to the formation of a neoplasm, which is an abnormal growth of tissue that can be benign (non-cancerous) or malignant (cancerous). Neoplasms can arise from various cell types and can affect any part of the body, including the brain."
-    },
-    {
-      "term": "Edema",
-      "definition": "Edema is the medical term for swelling caused by excess fluid trapped in the body's tissues. In the context of the brain, edema can indicate inflammation, injury, or other pathological processes and can lead to increased intracranial pressure."
-    },
-    {
-      "term": "Mass effect",
-      "definition": "Mass effect refers to the displacement of surrounding structures due to the presence of a mass, such as a tumor or swelling. In the brain, mass effect can lead to increased pressure and can affect normal brain function."
-    },
-    {
-      "term": "Ventricles",
-      "definition": "The ventricles are a system of interconnected cavities within the brain that produce and contain cerebrospinal fluid (CSF). They play a crucial role in cushioning the brain, maintaining intracranial pressure, and providing nutrients."
-    },
-    {
-      "term": "CSF Spaces",
-      "definition": "Cerebrospinal fluid (CSF) spaces refer to the areas in and around the brain and spinal cord where CSF circulates. These spaces are important for protecting the brain and spinal cord from injury and for removing waste products."
-    },
-    {
-      "term": "Hydrocephalus",
-      "definition": "Hydrocephalus is a medical condition characterized by an accumulation of cerebrospinal fluid within the ventricles of the brain, leading to increased intracranial pressure. This can result in swelling of the head, headaches, and cognitive impairments if not treated."
-    },
-    {
-      "term": "Brain Parenchyma",
-      "definition": "Brain parenchyma refers to the functional tissue of the brain, which includes neurons and glial cells. It is responsible for processing information and supporting brain function. Abnormalities in the brain parenchyma can indicate various neurological conditions."
-    },
-    {
-      "term": "Focal lesions",
-      "definition": "Focal lesions are localized areas of abnormal tissue in the brain that can result from various causes, including tumors, infections, or trauma. The presence of focal lesions can indicate underlying pathology that may require further investigation."
-    },
-    {
-      "term": "Hemorrhages",
-      "definition": "Hemorrhages refer to bleeding that occurs within the brain or surrounding tissues. This can be due to various causes, including trauma, aneurysms, or vascular malformations, and can lead to serious complications depending on the location and extent of the bleeding."
-    },
-    {
-      "term": "Abnormal signal intensities",
-      "definition": "Abnormal signal intensities on an MRI refer to areas that show unexpected brightness or darkness compared to normal tissue. These abnormalities can indicate various conditions, including inflammation, tumors, or other pathological changes."
+      "term": "Thalamus",
+      "definition": "The thalamus is a small structure located near the center of the brain that acts as a relay station for sensory and motor signals to the cerebral cortex. It plays a key role in regulating consciousness, sleep, and alertness, and is involved in processing sensory information."
     },
     {
       "term": "Brainstem",
-      "definition": "The brainstem is the part of the brain that connects the brain to the spinal cord. It controls many basic life functions, including breathing, heart rate, and blood pressure. Damage to the brainstem can have serious consequences for bodily functions."
+      "definition": "The brainstem is the part of the brain that connects the cerebrum with the spinal cord. It controls many basic life functions, such as breathing, heart rate, and blood pressure. The brainstem also plays a role in regulating sleep and wakefulness and is essential for the functioning of the nervous system."
     },
     {
-      "term": "Cranial Nerves",
-      "definition": "Cranial nerves are a set of twelve pairs of nerves that emerge directly from the brain and brainstem. They are responsible for a variety of functions, including sensory and motor functions of the head and neck, as well as some autonomic functions."
+      "term": "Ventricular System",
+      "definition": "The ventricular system is a network of interconnected cavities within the brain that produce and contain cerebrospinal fluid (CSF). This fluid cushions the brain, removes waste, and provides nutrients. The system includes the lateral ventricles, third ventricle, and fourth ventricle."
     },
     {
-      "term": "Sinuses",
-      "definition": "Sinuses are air-filled spaces located within the bones of the face and skull. They are lined with mucous membranes and play a role in humidifying and filtering the air we breathe, as well as contributing to voice resonance. Sinus abnormalities can indicate infections or other conditions."
+      "term": "Hydrocephalus",
+      "definition": "Hydrocephalus is a condition characterized by an accumulation of cerebrospinal fluid within the ventricles of the brain, leading to increased pressure. This can cause swelling of the head in infants and can lead to brain damage if not treated. Symptoms may include headaches, vision problems, and cognitive difficulties."
+    },
+    {
+      "term": "Midline Shift",
+      "definition": "Midline shift refers to a displacement of the brain's midline structures due to increased intracranial pressure or mass effect from a lesion. This shift can indicate serious conditions such as tumors, hemorrhages, or traumatic brain injury and may require urgent medical intervention."
+    },
+    {
+      "term": "Ventricular Asymmetry",
+      "definition": "Ventricular asymmetry refers to an unequal size or shape of the brain's ventricles. This can be a sign of underlying pathology, such as a mass effect or developmental abnormalities, and may require further evaluation to determine the cause."
+    },
+    {
+      "term": "Sulci",
+      "definition": "Sulci are the grooves or indentations on the surface of the brain that separate the gyri (ridges). They play a role in increasing the surface area of the brain, allowing for more neurons and greater cognitive function. The appearance of sulci can provide information about brain health and development."
+    },
+    {
+      "term": "Cisterns",
+      "definition": "Cisterns are large spaces in the brain filled with cerebrospinal fluid. They are located between the layers of the meninges (the protective membranes covering the brain) and help to cushion the brain and maintain intracranial pressure. Abnormalities in the cisterns can indicate various neurological conditions."
+    },
+    {
+      "term": "Effacement",
+      "definition": "Effacement refers to the reduction or obliteration of normal anatomical structures, often due to pressure from a mass or swelling. In the context of brain imaging, effacement of sulci or cisterns can indicate increased intracranial pressure or other pathological changes."
+    },
+    {
+      "term": "Posterior Fossa",
+      "definition": "The posterior fossa is a region at the back of the skull that contains the cerebellum, brainstem, and fourth ventricle. It is important for coordinating movement and balance. Abnormalities in this area can lead to various neurological symptoms, including coordination problems and dizziness."
+    },
+    {
+      "term": "Cerebellum",
+      "definition": "The cerebellum is a part of the brain located at the back of the head, responsible for coordinating voluntary movements, balance, and posture. It plays a crucial role in motor control and is involved in learning motor skills. Damage to the cerebellum can result in ataxia, which is a lack of coordination."
+    },
+    {
+      "term": "Cerebellar Tonsils",
+      "definition": "The cerebellar tonsils are structures located at the lower part of the cerebellum. They can be involved in conditions such as Chiari malformation, where they may herniate through the foramen magnum, leading to various neurological symptoms. Their position and appearance are important in assessing brain health."
+    },
+    {
+      "term": "Herniation",
+      "definition": "Herniation refers to the displacement of brain tissue from its normal position, often due to increased intracranial pressure or mass effect. This can lead to serious complications, including compression of vital brain structures, and is considered a medical emergency."
+    },
+    {
+      "term": "Vascular Structures",
+      "definition": "Vascular structures in the brain include blood vessels such as arteries and veins that supply blood to the brain. Proper functioning of these structures is essential for delivering oxygen and nutrients to brain tissue. Abnormalities in vascular structures can lead to conditions such as stroke or aneurysms."
+    },
+    {
+      "term": "Intracranial Hemorrhage",
+      "definition": "Intracranial hemorrhage is bleeding that occurs within the skull, which can be caused by trauma, aneurysms, or other medical conditions. This bleeding can increase pressure on the brain and lead to serious complications, including loss of consciousness, neurological deficits, or death."
+    },
+    {
+      "term": "Vascular Malformations",
+      "definition": "Vascular malformations are abnormal connections between blood vessels in the brain, which can lead to various complications, including bleeding or seizures. These malformations can be congenital (present at birth) or acquired and may require surgical intervention depending on their size and location."
+    },
+    {
+      "term": "Dural Venous Sinus Thrombosis",
+      "definition": "Dural venous sinus thrombosis is a condition where a blood clot forms in the dural venous sinuses, which are channels that drain blood from the brain. This can lead to increased intracranial pressure and can cause headaches, vision problems, and other neurological symptoms. It is a serious condition that requires prompt medical attention."
+    },
+    {
+      "term": "Intracranial Arteries",
+      "definition": "Intracranial arteries are the blood vessels located within the skull that supply blood to the brain. They are crucial for maintaining adequate blood flow and oxygen delivery to brain tissue. Blockages or abnormalities in these arteries can lead to strokes or other serious neurological conditions."
+    },
+    {
+      "term": "Flow Voids",
+      "definition": "Flow voids are areas seen on MRI scans that indicate normal blood flow within blood vessels. They appear as dark areas on the images and are important for assessing the patency (openness) of blood vessels. The presence of flow voids suggests that blood is flowing normally through the arteries."
+    },
+    {
+      "term": "Diffusion-Weighted Imaging (DWI)",
+      "definition": "Diffusion-Weighted Imaging (DWI) is a specific MRI technique that measures the diffusion of water molecules in tissue. It is particularly useful for detecting acute ischemic strokes, as areas of restricted diffusion indicate regions of the brain that are not receiving adequate blood flow."
+    },
+    {
+      "term": "Restricted Diffusion",
+      "definition": "Restricted diffusion refers to a condition where the movement of water molecules in tissue is limited, often due to cellular swelling or other pathological changes. In the context of brain imaging, restricted diffusion can indicate acute ischemia or infarction, which requires immediate medical attention."
+    },
+    {
+      "term": "ADC Map",
+      "definition": "The Apparent Diffusion Coefficient (ADC) map is a quantitative measure derived from diffusion-weighted imaging that provides information about the diffusion of water molecules in tissue. It helps to differentiate between normal and abnormal tissue, particularly in the context of ischemic strokes."
+    },
+    {
+      "term": "Post-Contrast Imaging",
+      "definition": "Post-contrast imaging refers to MRI scans performed after the administration of a contrast agent, which enhances the visibility of certain structures or abnormalities in the brain. This technique helps to identify lesions, tumors, or areas of inflammation that may not be visible on standard imaging."
+    },
+    {
+      "term": "Abnormal Enhancement",
+      "definition": "Abnormal enhancement refers to areas in the brain that show increased signal intensity after the administration of a contrast agent during imaging. This can indicate the presence of tumors, inflammation, or other pathological changes that require further evaluation."
+    },
+    {
+      "term": "Meninges",
+      "definition": "The meninges are the protective membranes that cover the brain and spinal cord. They consist of three layers: the dura mater, arachnoid mater, and pia mater. The meninges help to protect the central nervous system from injury and infection and play a role in the circulation of cerebrospinal fluid."
+    },
+    {
+      "term": "Pituitary Gland",
+      "definition": "The pituitary gland is a small gland located at the base of the brain that plays a crucial role in regulating various hormonal functions in the body. It is often referred to as the 'master gland' because it controls other endocrine glands and influences growth, metabolism, and reproductive functions."
+    },
+    {
+      "term": "Pineal Gland",
+      "definition": "The pineal gland is a small, pea-shaped gland located deep within the brain. It produces melatonin, a hormone that regulates sleep-wake cycles. The pineal gland is involved in various biological rhythms and is sensitive to light exposure."
     },
     {
       "term": "Orbits",
-      "definition": "Orbits are the bony cavities in the skull that house the eyes and associated structures, such as muscles, nerves, and blood vessels. Abnormalities in the orbits can affect vision and may indicate underlying health issues."
+      "definition": "The orbits are the bony cavities in the skull that house the eyes and associated structures, including muscles, nerves, and blood vessels. The health of the orbits is important for proper vision and eye function, and abnormalities can indicate various conditions."
     },
     {
-      "term": "Skull",
-      "definition": "The skull is the bony structure that encases and protects the brain. It consists of several bones that are fused together and provides support for the face and head. Abnormalities in the skull can indicate trauma or other pathological conditions."
+      "term": "Paranasal Sinuses",
+      "definition": "The paranasal sinuses are air-filled spaces located within the bones of the face and skull, connected to the nasal cavity. They help to lighten the skull, improve voice resonance, and produce mucus. Inflammation or infection of the sinuses can lead to sinusitis, causing symptoms such as facial pain and congestion."
     },
     {
-      "term": "Scalp",
-      "definition": "The scalp is the skin covering the top of the head, which contains hair follicles, blood vessels, and nerves. It plays a role in protecting the skull and brain and can be affected by various conditions, including infections or injuries."
+      "term": "Mucosal Thickening",
+      "definition": "Mucosal thickening refers to an increase in the thickness of the mucous membrane lining the sinuses or other cavities. This can be a sign of inflammation or infection, such as sinusitis, and may indicate the presence of fluid or other pathological changes."
     },
     {
-      "term": "Neurosurgical consultation",
-      "definition": "A neurosurgical consultation involves an evaluation by a neurosurgeon, a medical doctor specialized in surgery of the brain and nervous system. This consultation is typically sought for conditions that may require surgical intervention, such as tumors, vascular malformations, or traumatic injuries."
+      "term": "Fluid Levels",
+      "definition": "Fluid levels in the sinuses refer to the presence of fluid accumulation within the sinus cavities, which can indicate infection or other pathological conditions. The detection of fluid levels on imaging can help diagnose sinusitis or other sinus-related issues."
     },
     {
-      "term": "Biopsy",
-      "definition": "A biopsy is a medical procedure that involves taking a small sample of tissue from the body for examination under a microscope. This is often done to diagnose conditions such as cancer or infections, and it helps determine the nature of a lesion or abnormality."
+      "term": "Optic Nerves",
+      "definition": "The optic nerves are the pair of nerves that transmit visual information from the retina in the eye to the brain. They play a crucial role in vision, and any abnormalities in the optic nerves can lead to visual disturbances or loss of vision."
     },
     {
-      "term": "Management",
-      "definition": "Management in a medical context refers to the approach taken to treat or control a medical condition. This can include various strategies such as medication, surgery, lifestyle changes, or monitoring, depending on the specific diagnosis and patient needs."
+      "term": "Extraocular Muscles",
+      "definition": "The extraocular muscles are the muscles that control the movement of the eyes. They allow for coordinated eye movements and are essential for proper vision. Abnormalities in these muscles can lead to issues such as strabismus (crossed eyes) or diplopia (double vision)."
+    },
+    {
+      "term": "Cranial Nerves",
+      "definition": "Cranial nerves are a set of twelve pairs of nerves that emerge directly from the brain and brainstem. They are responsible for various functions, including sensory and motor functions of the head and neck, as well as autonomic functions. Each cranial nerve has a specific role, and abnormalities can lead to a range of neurological symptoms."
+    },
+    {
+      "term": "Optic Chiasm",
+      "definition": "The optic chiasm is the point where the optic nerves from both eyes cross over before reaching the brain. This structure is crucial for binocular vision and depth perception. Damage or abnormalities in the optic chiasm can lead to visual field defects."
+    },
+    {
+      "term": "Trigeminal Nerves",
+      "definition": "The trigeminal nerves are the fifth pair of cranial nerves responsible for sensation in the face and motor functions such as biting and chewing. They are divided into three branches: the ophthalmic, maxillary, and mandibular nerves. Abnormalities in the trigeminal nerves can lead to facial pain or sensory disturbances."
+    },
+    {
+      "term": "Impression",
+      "definition": "In a medical report, the impression is the summary of the findings and conclusions drawn from the examination. It provides a concise overview of the patient's condition based on the imaging results and helps guide further management or treatment."
+    },
+    {
+      "term": "Ischemia",
+      "definition": "Ischemia refers to a condition where there is insufficient blood flow to a tissue, leading to a lack of oxygen and nutrients. This can result in tissue damage or death if not resolved promptly. Ischemia can occur in various organs, including the heart and brain, and is often associated with conditions such as stroke or heart attack."
+    },
+    {
+      "term": "Neoplasm",
+      "definition": "A neoplasm is an abnormal growth of tissue, which can be benign (non-cancerous) or malignant (cancerous). Neoplasms can occur in any part of the body, including the brain, and may require further evaluation and treatment depending on their type and behavior."
+    },
+    {
+      "term": "Neurological Evaluation",
+      "definition": "Neurological evaluation is a comprehensive assessment performed by a healthcare professional to determine the functioning of the nervous system. It includes a review of medical history, physical examination, and various tests to assess cognitive function, motor skills, reflexes, and sensory perception. This evaluation helps diagnose neurological conditions and guide treatment."
     }
   ],
-  "user_id": 21,
-  "report_code": 9716,
+  "user_id": 22,
+  "report_code": 6513,
+  "id": 60,
   "images_path": [
     {
       "term": "MRI",
+      "image": null
+    },
+    {
+      "term": "Cerebral Parenchyma",
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
-      "term": "Head Scan",
+      "term": "Gray-White Matter Differentiation",
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
-      "term": "Intracranial pathology",
+      "term": "Cortical Infarction",
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
-      "term": "Technique",
-      "image": null
-    },
-    {
-      "term": "T1-weighted",
-      "image": null
-    },
-    {
-      "term": "T2-weighted",
-      "image": null
-    },
-    {
-      "term": "FLAIR",
-      "image": null
-    },
-    {
-      "term": "Contrast-enhanced images",
-      "image": null
-    },
-    {
-      "term": "Cerebellum",
+      "term": "Subcortical Infarction",
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
-      "term": "Hypointense lesion",
-      "image": null
-    },
-    {
-      "term": "Hyperintense",
-      "image": null
-    },
-    {
-      "term": "Neoplastic process",
-      "image": null
-    },
-    {
-      "term": "Edema",
-      "image": null
-    },
-    {
-      "term": "Mass effect",
-      "image": null
-    },
-    {
-      "term": "Ventricles",
+      "term": "Demyelination",
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
-      "term": "CSF Spaces",
+      "term": "Gliosis",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Focal Lesions",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Basal Ganglia",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Thalamus",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Brainstem",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Ventricular System",
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
@@ -216,59 +273,150 @@
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
-      "term": "Brain Parenchyma",
+      "term": "Midline Shift",
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
-      "term": "Focal lesions",
-      "image": null
-    },
-    {
-      "term": "Hemorrhages",
-      "image": null
-    },
-    {
-      "term": "Abnormal signal intensities",
-      "image": null
-    },
-    {
-      "term": "Brainstem",
+      "term": "Ventricular Asymmetry",
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
-      "term": "Cranial Nerves",
+      "term": "Sulci",
       "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
     },
     {
-      "term": "Sinuses",
+      "term": "Cisterns",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Effacement",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Posterior Fossa",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Cerebellum",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Cerebellar Tonsils",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Herniation",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Vascular Structures",
       "image": null
+    },
+    {
+      "term": "Intracranial Hemorrhage",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Vascular Malformations",
+      "image": null
+    },
+    {
+      "term": "Dural Venous Sinus Thrombosis",
+      "image": null
+    },
+    {
+      "term": "Intracranial Arteries",
+      "image": null
+    },
+    {
+      "term": "Flow Voids",
+      "image": null
+    },
+    {
+      "term": "Diffusion-Weighted Imaging (DWI)",
+      "image": null
+    },
+    {
+      "term": "Restricted Diffusion",
+      "image": null
+    },
+    {
+      "term": "ADC Map",
+      "image": null
+    },
+    {
+      "term": "Post-Contrast Imaging",
+      "image": null
+    },
+    {
+      "term": "Abnormal Enhancement",
+      "image": null
+    },
+    {
+      "term": "Meninges",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Pituitary Gland",
+      "image": "https://translaited.backend.skannr.com/images/endocrine_system/pituitary_gland.jpg"
+    },
+    {
+      "term": "Pineal Gland",
+      "image": "https://translaited.backend.skannr.com/images/endocrine_system/pineal_gland.jpg"
     },
     {
       "term": "Orbits",
       "image": null
     },
     {
-      "term": "Skull",
+      "term": "Paranasal Sinuses",
       "image": null
     },
     {
-      "term": "Scalp",
+      "term": "Mucosal Thickening",
       "image": null
     },
     {
-      "term": "Neurosurgical consultation",
+      "term": "Fluid Levels",
       "image": null
     },
     {
-      "term": "Biopsy",
+      "term": "Optic Nerves",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Extraocular Muscles",
       "image": null
     },
     {
-      "term": "Management",
+      "term": "Cranial Nerves",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Optic Chiasm",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Trigeminal Nerves",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Impression",
+      "image": null
+    },
+    {
+      "term": "Ischemia",
+      "image": "https://translaited.backend.skannr.com/images/nervous_system/brain.jpg"
+    },
+    {
+      "term": "Neoplasm",
+      "image": null
+    },
+    {
+      "term": "Neurological Evaluation",
       "image": null
     }
   ],
-  "id": 53,
-  "patient_name": "Dr Zaheer Khonat",
-  "timestamp": "2024-08-18T00:53:19.943790"
+  "patient_name": "John Doe",
+  "timestamp": "2024-08-20T04:32:38.236292"
 }

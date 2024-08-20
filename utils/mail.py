@@ -30,7 +30,7 @@ def send_email(to_email, month, num_requests, charges):
             </tr>
         </table>
         <h2>Subscription Charges for {month}</h2>
-        <p>Dear Client,</p>
+        <p>Dear Patient,</p>
         <p>Here are the details of your subscription usage for {month}:</p>
         <ul>
             <li><strong>Number of Requests:</strong> {num_requests}</li>
@@ -89,7 +89,7 @@ def send_report_notification(to_email, report_code, url):
             </tr>
         </table>
         <h2>Translaited version of your report</h2>
-        <p>Dear Client,</p>
+        <p>Dear Patient,</p>
         <p>Your report is generated and is available at <a href="{url}">{url}</a>. You can access your report by clicking the given link. 
         Your verification code is <b>{report_code}</b>. Please don't share it with anyone.</p>
        
