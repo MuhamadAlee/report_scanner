@@ -1,8 +1,8 @@
 {
   "response": {
-    "MRI Report": "",
+    "MRI Report": "MRI",
     "Referring Physician": "Dr. Zaheer Khonat, MD",
-    "Date of Examination": "[Insert Date]",
+    "Date of Examination": "January 12, 2024",
     "Study": "Brain MRI with Contrast",
     "Clinical Indication": "Persistent headache, dizziness, visual disturbances. Rule out intracranial pathology.",
     "Findings": {
