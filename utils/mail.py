@@ -127,13 +127,14 @@ def send_report_notification(to_email, report_code, url):
 def user_creation_notification(username, to_email, password):
     # Email credentials
     sender_email = os.getenv("EMAIL_ADDRESS")
+    cc_sender_email = os.getenv("CC_EMAIL_ADDRESS")
     sender_password = os.getenv("EMAIL_PASSWORD")
 
     # Create the email message
     msg = MIMEMultipart()
     msg['From'] = sender_email
     msg['To'] = to_email
-    msg['Cc'] = sender_email
+    msg['Cc'] = cc_sender_email
     msg['Subject'] = f"User Cradentials"
     
 
@@ -177,7 +178,7 @@ def user_creation_notification(username, to_email, password):
             server.starttls()  # Secure the connection
             server.login(sender_email, sender_password)  # Login to the email account
             text = msg.as_string()
-            server.sendmail(sender_email, [to_email, sender_email], text)  # Send the email
+            server.sendmail(sender_email, [to_email, cc_sender_email], text)  # Send the email
         return "Email sent successfully!"
     except Exception as e:
         print(e)
