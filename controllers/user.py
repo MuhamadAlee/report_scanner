@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from models.user import User
 from schemas.user import UserBase
 from fastapi import HTTPException
+from utils.mail import user_creation_notification
 
 
 def get_user(db: Session, user_id: int):
@@ -35,6 +36,10 @@ def create_user(db: Session, user: UserBase):
         db.add(db_user)
         db.commit()
         db.refresh(db_user)
+        try:
+            user_creation_notification(user.username, user.email, user.hashed_password)
+        except Exception as e:
+            print(f"unable to send the notification: {e}")
         return db_user
     except:
         raise HTTPException(status_code=422, detail="Unable to create user")

@@ -124,3 +124,62 @@ def send_report_notification(to_email, report_code, url):
         print(e)
         return "Failed to send email"
     
+def user_creation_notification(username, to_email, password):
+    # Email credentials
+    sender_email = os.getenv("EMAIL_ADDRESS")
+    sender_password = os.getenv("EMAIL_PASSWORD")
+
+    # Create the email message
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = to_email
+    msg['Cc'] = sender_email
+    msg['Subject'] = f"User Cradentials"
+    
+
+    body = f"""
+    <html>
+    <body>
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td align="left">
+                    <img src="cid:logo" alt="Company Logo" width="100" height="50">
+                </td>
+            </tr>
+        </table>
+        <h2>User creation update</h2>
+        <p>Dear {username},</p>
+        <p>Welcome to Tranlaited. Your account is setup on Tranlaited.</p><br/>
+        <p>Your Email: <b>{to_email}</b></p>
+        <p>Your Password: <b>{password}</b></p>
+       
+        <p>Best Regards,<br>Translaited ltd</p>
+        <footer>
+            <hr>
+            <p><a href="https://translaited.com/">translaited.com</a></p>
+        </footer>
+    </body>
+    </html>
+    """
+
+    msg.attach(MIMEText(body, 'html'))
+
+     # Attach the logo image (ensure the logo image is accessible)
+    with open(os.path.join(os.path.join(str(Path(__file__).resolve().parent.parent)), 'images','logo.jpg'), 'rb') as img_file:
+        msg_image = MIMEImage(img_file.read())
+        msg_image.add_header('Content-ID', '<logo>')
+        msg.attach(msg_image)
+
+    try:
+        # Set up the SMTP server
+        with smtplib.SMTP(os.getenv('SMTP_SERVER'), int(os.getenv('SMTP_PORT'))) as server:
+            server.ehlo()
+            server.starttls()  # Secure the connection
+            server.login(sender_email, sender_password)  # Login to the email account
+            text = msg.as_string()
+            server.sendmail(sender_email, [to_email, sender_email], text)  # Send the email
+        return "Email sent successfully!"
+    except Exception as e:
+        print(e)
+        return "Failed to send email"
+    
