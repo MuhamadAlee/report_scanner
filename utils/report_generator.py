@@ -105,7 +105,7 @@ class ReportGenerator:
             - Don't miss any term of the report. But avoid adding explaination for too obvious terms e.g name date etc.
             - Consider case senstivity for medical terms as keys of dictionary must exactly match with terms used in medical report.
             - IMPORTANT!! As this is medical report so please don't miss any complex term or medical term or even a single medical word.
-            - Your final response must be according to the below instructions.
+            - Finally return the list of terms and definitions dictionary and remember your final response must be according to the below instructions.
                 \n{format_instructions}
             Here's is the medical report : '''{report}'''
         """
@@ -216,6 +216,10 @@ class ReportGenerator:
         
         try:
             medical_terms = self.get_medical_terms(self.report_formatting_from_dictionary(formatted_report['report']))
+            if len(medical_terms)==1: 
+                if type(medical_terms)==dict:
+                    _, medical_terms = next(iter(medical_terms.items()))
+
             terms = [dictionary['term'] for dictionary in medical_terms]
             print("-------------------- medical terms extraction done --------------------")
             human_organ_system = None

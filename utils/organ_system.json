@@ -17,6 +17,7 @@
         "pineal_gland"
     ],
     "skeletal_system": [
+        "musculoskeletal_system",
         "interphalangeal_joint",
         "Sternoclavicular_joint",
         "carpal_joint",
@@ -68,9 +69,6 @@
         "Pancreas",
         "mouth_and_teeth",
         "liver"
-    ],
-    "musculoskeletal_system": [
-        "musculoskeletal_system"
     ],
     "integumentary_system": [
         "hair",
