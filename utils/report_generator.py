@@ -129,7 +129,7 @@ class ReportGenerator:
     def transform_dicts(list_of_dicts):
         responses = list()
         for item in list_of_dicts:
-            if item["organ_system"] is not None:
+            if (item["organ_system"] is not None) and (item["organ_system_portion"] is not None):
                 # image = (os.path.join(str(Path(__file__).resolve().parent.parent), "images", item["organ_system"], f'{item["organ_system_portion"]}.jpg'))
                 # with open(image, "rb") as image_file:
                 #     image = base64.b64encode(image_file.read()).decode('utf-8')
