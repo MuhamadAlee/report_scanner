@@ -89,3 +89,14 @@ def get_demo_report():
         return data
     except:
         raise HTTPException(status_code=404, detail='demo report not found')
+
+
+def get_all_reports_data(db: Session, skip: int = 0, limit: int = 10):
+    try:
+        data_records = db.query(Report).offset(skip).limit(limit).all()
+        if not data_records:
+            raise HTTPException(status_code=404, detail="No data found for the specified user")
+        return data_records
+    except:
+        raise HTTPException(status_code=404, detail="No Report find")
+        

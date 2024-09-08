@@ -91,3 +91,9 @@ async def delete_data_record(report_id: int, db: Session = Depends(get_db)):
 @report.get("/demo_report/")
 async def fetch_demo_report():
     return get_demo_report()
+
+@report.get("/get_all_reports/", dependencies=[Depends(get_current_user)])
+def all_reports(skip: int = 0, limit: int = 10, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    if not current_user.is_superuser:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Not authorized for this endpoint')
+    return get_all_reports_data(db, skip=skip, limit=limit)
