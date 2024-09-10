@@ -63,6 +63,7 @@ class ReportGenerator:
         
         format_template = """
            You are a medical expert who is provided with a Medical Report delimited by triple quotes. You are suppose to perform following operations:
+            - Read out of the given report carefully and decide wheather its a medical report or raw text. Your decision should be based on the content of the report. If it has patient's information, diagnoses or any medical information, then it must be a medical report.
             - Classify the medical report as medical diagnoses or random text. It's random text just return 'report_satatus' as 'Invalid Report', otherwise perfrom below tasks.
             - Place the 'report_status' as 'medical diagnoses' inside the JSON output first.
             - Structure the report into patient-centered interactive report.
