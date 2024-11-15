@@ -227,6 +227,8 @@ class ReportGenerator:
             with open( os.path.join(SCRIPT_DIR, os.getenv("ORGAN_SYSTEM_MAPPING_JSON")), 'r') as file:
                 human_organ_system = json.load(file)
 
+            print(human_organ_system)
+
             images_path = self.identify_images(terms, human_organ_system)
             print("-------------------- images generation done --------------------")
 
