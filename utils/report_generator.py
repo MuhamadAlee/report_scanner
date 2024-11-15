@@ -176,6 +176,7 @@ class ReportGenerator:
             partial_variables={"format_instructions": output_parser.get_format_instructions()},
         )
 
+        print("----------------------------------")
         organ_system_chain = organ_system_prompt | self.llm_4_mini | output_parser
         organ_system_response = organ_system_chain.invoke({"medical_terms": medical_terms, "human_organ_system": human_organ_system})
         organ_system_response = self.transform_dicts(organ_system_response['properties'])
@@ -227,7 +228,6 @@ class ReportGenerator:
             with open( os.path.join(SCRIPT_DIR, os.getenv("ORGAN_SYSTEM_MAPPING_JSON")), 'r') as file:
                 human_organ_system = json.load(file)
 
-            print(human_organ_system)
 
             images_path = self.identify_images(terms, human_organ_system)
             print("-------------------- images generation done --------------------")
