@@ -6,7 +6,7 @@ from config.database import get_db
 from models.user import User
 from fastapi.security import OAuth2PasswordRequestForm
 from controllers.auth import create_access_token, revoke_token, get_current_user, get_current_token
-
+from pydantic import BaseModel
 class LoginRequest(BaseModel):
     username: str
     password: str
