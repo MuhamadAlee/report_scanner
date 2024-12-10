@@ -16,6 +16,7 @@ auth = APIRouter(tags=['authentication'])
 def login(userdetails: OAuth2PasswordRequestForm = Depends(), db:Session = Depends(get_db)):
     
     user = db.query(User).filter(User.email == userdetails.username).first()
+    print("---------------------------")
 
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='User does not exist')
